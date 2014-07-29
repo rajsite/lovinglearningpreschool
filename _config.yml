@@ -1,4 +1,6 @@
 #doesn't work, no idea why
+encoding: UTF-8
+
 defaults:
   -
     scope:
