@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,p,ul {
 }
 body{
 	background-color:#3465a4;
-	background-image:url(background.png);
+	background-image:url(../images/background.png);
 	background-position: bottom;
 	background-repeat: repeat-x;
 	background-attachment:fixed;
@@ -211,28 +211,28 @@ td.content {
 
 
 td.bordertl {
-	background-image: url(bordertopleft.png);
+	background-image: url(../images/bordertopleft.png);
 }
 td.bordert {
-	background-image: url(bordertop.png);
+	background-image: url(../images/bordertop.png);
 }
 td.bordertr {
-	background-image: url(bordertopright.png);
+	background-image: url(../images/bordertopright.png);
 }
 td.borderr {
-	background-image: url(borderright.png);
+	background-image: url(../images/borderright.png);
 }
 td.borderl {
-	background-image: url(borderleft.png);
+	background-image: url(../images/borderleft.png);
 }
 td.borderbl {
-	background-image: url(borderbottomleft.png);
+	background-image: url(../images/borderbottomleft.png);
 }
 td.borderb {
-	background-image: url(borderbottom.png);
+	background-image: url(../images/borderbottom.png);
 }
 td.borderbr {
-	background-image: url(borderbottomright.png);
+	background-image: url(../images/borderbottomright.png);
 }
 
 

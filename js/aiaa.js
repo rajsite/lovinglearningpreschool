@@ -138,7 +138,7 @@ $(document).ready(function(){
 		$.cookie('konamiEnabled', 'true');
 	});
 	$(document).konami(function(){
-		aiaa.loadScript(null,'files_template/asteroids.min.js');
+		aiaa.loadScript(null,'js/asteroids.min.js');
 	});
 	
 

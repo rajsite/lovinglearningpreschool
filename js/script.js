@@ -6,7 +6,7 @@ if(typeof window.aiaa == 'undefined') {
 
 aiaa.loadStyle = function(url)
 {
-	//<link type="text/css" href="files_template/style.css" rel="stylesheet"  media="screen" />
+	//<link type="text/css" href="css/style.css" rel="stylesheet"  media="screen" />
 	var style = document.createElement('link');
 	style.type = 'text/css';
 	style.href = url;
@@ -59,23 +59,23 @@ aiaa.loadScript = function(loadCondition, scriptLink, scriptAsync, callbackFN, i
 	}
 }
 //load jquery base
-aiaa.loadScript(null,'files_template/jquery-1.4.4_min.js');
+aiaa.loadScript(null,'js/jquery-1.4.4_min.js');
 
 //load jquery hoverIntent plugin, used for navbar and gallery
-aiaa.loadScript('jQuery','files_template/jquery.hoverIntent.minified.js');
+aiaa.loadScript('jQuery','js/jquery.hoverIntent.minified.js');
 
 //load jquery slimbox plugin, used to show images in galleries
-aiaa.loadStyle('files_template/slimbox2.css');
-aiaa.loadScript('jQuery','files_template/slimbox2.js');
+aiaa.loadStyle('css/slimbox2.css');
+aiaa.loadScript('jQuery','js/slimbox2.js');
 
 //load jquery cookie plugin
-aiaa.loadScript('jQuery','files_template/jquery.cookie.js');
+aiaa.loadScript('jQuery','js/jquery.cookie.js');
 
 //load jquery konami plugin ;)
-aiaa.loadScript('jQuery','files_template/konami.js');
+aiaa.loadScript('jQuery','js/konami.js');
 
 //execute scripts for aiaa website
-aiaa.loadScript('jQuery','files_template/aiaa.js');
+aiaa.loadScript('jQuery','js/aiaa.js');
 
 //load google analytics
   var _gaq = _gaq || [];
