@@ -1,5 +1,8 @@
 #doesn't work, no idea why
 encoding: UTF-8
+safe: true
+exclude: [logo]
+timezone: America/Chicago
 
 defaults:
   -
