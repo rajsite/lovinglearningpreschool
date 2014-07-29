@@ -1,0 +1,10 @@
+table.supertable {
+	border-collapse: collapse;
+	width: 100%;
+}
+table.nav {
+	display: none;
+}
+p.validitybuttons {
+	display: none;
+}

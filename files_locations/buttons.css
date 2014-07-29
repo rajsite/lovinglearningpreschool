@@ -1,0 +1,44 @@
+.buttontitle
+{
+-webkit-border-top-left-radius: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+border-style: solid;
+border-width: 1px;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:10px;
+padding-top:10px;
+
+	text-align: center;
+	text-decoration: none;
+	font: 24px/100% Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+
+}
+.buttonbox
+{
+border-style: solid;
+text-align: center;
+border: solid 2px #da7c0c;
+padding:10px;
+}
+.buttonouterbox
+{
+display: inline-block;
+vertical-align:top;
+margin:10px;
+}

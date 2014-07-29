@@ -1,0 +1,271 @@
+/************************************************
+***                  AIAA CSS                 ***
+*************************************************/
+pre {
+	font-family: monospace;
+}
+h1,h2,h3,h4,h5,p,ul {
+	font-family: sans-serif;
+}
+body{
+	background-color:#3465a4;
+	background-image:url(background.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-attachment:fixed;
+}
+table.supertable {
+	border-collapse: collapse;
+	width: 80%;
+	max-width: 1024px;
+	min-width: 700px;
+}
+
+
+/******************
+*  Normal Nav Elements
+****************/
+table.nav {
+	border-collapse: collapse;
+	width: 100%;
+}
+td.nav {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	margin: 0px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	padding: .5em .1em .5em; /*top l&r bottom*/
+
+	border: thin solid #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+
+}
+td.nav:hover, td.td-nav-ie-hover {
+	clear: none;
+	cursor: pointer;
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+td.nav:active {
+	cursor: pointer;
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+a.nav:link {
+	font-style: normal;
+	margin: 0px;
+	width: 100%;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.nav:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.nav:hover, a.a-nav-ie-hover{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.nav:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+/******************
+*  Joinbutton Nav Elements
+****************/
+td.navjoin {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	margin: 0px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	padding: .5em .1em .5em; /*top l&r bottom*/
+
+	border: solid thin #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+td.navjoin:hover, td.td-navjoin-ie-hover {
+	clear: none;
+	cursor: pointer;
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+td.navjoin:active {
+	cursor: pointer;
+	background: #f47c2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+a.navjoin:link {
+	font-style: normal;
+	margin: 0px;
+	width: 100%;
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.navjoin:visited {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.navjoin:hover, a.a-navjoin-ie-hover{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a.navjoin:active {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+
+/****
+* Scroller
+*******/
+
+td.scroller {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #999999;
+	border: none #000000;
+	padding: .2em 0em .2em;
+	margin: 0px;
+	text-align: left;
+	overflow: auto;
+	line-height: 1;
+}
+td.scroller a:link {
+	color: #CC5500;
+	text-decoration: none;
+}
+td.scroller a:visited {
+	color: #CC5500;
+	text-decoration: none;
+}
+td.scroller a:hover {
+	color: #A64600;
+	text-decoration: none;
+}
+td.scroller a:active {
+	color: #A64600;
+	text-decoration: none;
+}
+
+/**********
+*  Contents
+***********/
+
+table.content {
+	border-collapse: collapse;
+	width: 100%;
+}
+td.content {
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	background:white;
+}
+
+
+/**********
+*  Content Border
+***********/
+
+
+td.bordertl {
+	background-image: url(bordertopleft.png);
+}
+td.bordert {
+	background-image: url(bordertop.png);
+}
+td.bordertr {
+	background-image: url(bordertopright.png);
+}
+td.borderr {
+	background-image: url(borderright.png);
+}
+td.borderl {
+	background-image: url(borderleft.png);
+}
+td.borderbl {
+	background-image: url(borderbottomleft.png);
+}
+td.borderb {
+	background-image: url(borderbottom.png);
+}
+td.borderbr {
+	background-image: url(borderbottomright.png);
+}
+
+
+/**********
+*  Page footer stuff
+***********/
+
+
+td.bottombar {
+	color: #999999;
+	text-shadow: 0px 1px 1px #000000;
+}
+td.bottombar a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+td.bottombar a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+td.bottombar a:hover {
+	color: #333399;
+	text-decoration: none;
+}
+td.bottombar a:active {
+	color: #333399;
+	text-decoration: none;
+}
+p.webmaster {
+	font-size: 9px;
+	color: #FFFFFF;
+}
+td.scroller div {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
