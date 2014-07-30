@@ -122,14 +122,12 @@ $(document).ready(function () {
 	//secret konami code ;)
 	aiaa.konamiEnabled = $.cookie('konamiEnabled');
 	if (aiaa.konamiEnabled === 'true') {
-		var temp = $('body').css('background-image');
-		temp = temp.substring(0, temp.indexOf('background')) + 'backgroundk.jpg';
-		$('body').css('background-image', temp);
+		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+        $('body').css('background-color', 'black');
 	}
 	$(document).konami(function () {
-		var temp = $('body').css('background-image');
-		temp = temp.substring(0, temp.indexOf('background')) + 'backgroundk.jpg';
-		$('body').css('background-image', temp);
+		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+        $('body').css('background-color', 'black');
 		$.cookie('konamiEnabled', 'true');
 	});
 	$(document).konami(function () {
