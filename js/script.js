@@ -49,24 +49,26 @@ var aiaa = (function () {
     }
     
     //load jquery base
-    loadScript(null, 'js/jquery-1.4.4_min.js');
+	loadScript(null, 'js/jquery-1.11.1.min.js');
 
     //load jquery hoverIntent plugin, used for navbar and gallery
-    loadScript('jQuery', 'js/jquery.hoverIntent.minified.js');
+    loadScript('jQuery', 'js/jquery.hoverIntent.minified-1.8.0.js');
 
     //load jquery slimbox plugin, used to show images in galleries
     loadStyle('css/slimbox2.css');
-    loadScript('jQuery', 'js/slimbox2.js');
+    loadScript('jQuery', 'js/slimbox-2.0.5.js');
 
     //load jquery cookie plugin
-    loadScript('jQuery', 'js/jquery.cookie.js');
+    loadScript('jQuery', 'js/jquery.cookie-1.4.1.js');
 
     //load jquery konami plugin ;)
     loadScript('jQuery', 'js/konami.js');
 
     //execute scripts for aiaa website
-    loadScript('jQuery', 'js/aiaa.js');
-
+    loadScript("(( (typeof jQuery !== 'undefined') &&\
+	               (typeof jQuery.fn.hoverIntent === 'function') &&\
+                   (typeof jQuery.fn.konami === 'function') &&\
+				   (typeof jQuery.cookie === 'function')) ? 'defined' : undefined )", 'js/aiaa.js');
     
     
     //load google analytics
