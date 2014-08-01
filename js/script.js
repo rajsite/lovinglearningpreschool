@@ -1,84 +1,138 @@
-/*jslint nomen: true, evil: true*/
+/*global aiaa, $*/
 
-//set-up global object
-var aiaa = (function () {
+// (function (aiaa) { aiaa.poopytoo = "hello"; } (aiaa));
+
+
+
+//global variables
+aiaa.konamiEnabled = 'false';
+aiaa.navLastLink = '';
+
+//global ajax error handler
+$(document).ajaxError(function (e, xhr, settings, exception) {
     'use strict';
-    var maxIterationNum = 10, //The max iterations that should be done before failing to load script, total time = 10*setTimeOut length
-        _gaq = []; // Google Analytics variable
-    
-    function loadStyle(url) {
-        //<link type="text/css" href="css/style.css" rel="stylesheet"  media="screen" />
-        var style = document.createElement('link');
-        style.type = 'text/css';
-        style.href = url;
-        style.rel = 'stylesheet';
-        style.media = 'screen';
-        document.getElementsByTagName('head')[0].appendChild(style);
-    }
+	//check if the ajax error may have been from the nav loader
+	if (aiaa.navLastLink === settings.url) {
+		$("td.scroller").stop(true, true).fadeTo("fast", 1);
+	}
+	//alert('error in: ' + settings.url + ' \\n'+'error:\\n' + exception);
+});
 
-    // loads a script at a given link based on loadCondition, ie. 'jQuery' waits for jQuery to be defined before running and 'jQuery.fn.hoverIntent' waits for hoverIntent
-    function loadScript(loadCondition, scriptLink, scriptAsync, callbackFN, iterationNum) {
-        if (eval('typeof ' + loadCondition) === 'undefined') {
-            if (typeof iterationNum !== 'number') {
-                iterationNum = 0;
-            }
+// function loadNewScrollerFromLink
+// param: link
+// usage: takes the given link, dynamically loads that page and searches for the scoller content on that page
+//        the data from the loaded page scroller is then formatted and injected into this page scroller
+// ASSUMPTIONS: This script ONLY works if all the linked pages are in the SAME level directory, NO SUB DIRECTORIES
+aiaa.loadNewScrollerFromLink = function (link) {
+    'use strict';
+	//fade out the scroller before loading the directory
+	$("td.scroller").fadeTo("fast", 0);
 
-            if (iterationNum < maxIterationNum) {
-                iterationNum = iterationNum + 1;
+	//get the linked page and start processing
+    $.get(link, function (responseText, textStatus) {
+		//Load the scroller text and inject in this page
+		//since all files in the same directory, routing issues shouldn't happen
+		$("#scroller").html($("#scroller", responseText).html());
+		
+		//done loading so fade back in!
+		$("td.scroller").stop(true, true).fadeTo("fast", 1);
+	});
+};
 
-                // http://www.west-wind.com/weblog/posts/5033.aspx
-                setTimeout(function () {
-                    loadScript(loadCondition, scriptLink, scriptAsync, callbackFN, iterationNum);
-                }, 100);
-            }
-        } else {
-            if (typeof scriptLink === 'string') {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                if (scriptAsync === true) {
-                    script.async = true;
-                }
-                script.src = scriptLink;
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
 
-            if (typeof callbackFN === 'function') {
-                callbackFN.call(window);
-            }
-        }
-    }
-    
-    //load jquery base
-	loadScript(null, 'js/jquery-1.11.1.min.js');
+//run when the document object mmodel has loaded
+$(document).ready(function () {
+    'use strict';
+	//Activate the navbar scroller script
+	$("td.nav, td.navjoin").hoverIntent({
+		sensitivity: 7, // number = sensitivity threshold (must be 1 or higher)    
+		interval: 45, // number = milliseconds for onMouseOver polling interval    
+		over: function () {  // function = onMouseOver callback (REQUIRED)    
+			//Get the hovered link
+			var link = $(this).children("a").attr("href");
+			
+			//check if the link is the same as the last one, 
+			//assumes loaded correctly last time so don't load again
+			if (link !== aiaa.navLastLink) {
+				//First set the last link for the error handler
+				aiaa.navLastLink = link;
+				//Then try to load the file
+				aiaa.loadNewScrollerFromLink(link);
+			}
+		},
+		timeout: 100, // number = milliseconds delay before onMouseOut    
+		out: function () { // function = onMouseOut callback (REQUIRED) 
+		//empty function
+		}
+	});
+	
+	//make each navbar cell clickable instead of just the test link
+	$('td.nav, td.navjoin').click(function () {
+		document.location = $(this).children('a').attr('href');
+	});
+	
+	//ie hover fix for nav bar
+	$('td.nav').hover(function () {
+		$(this).addClass('td-nav-ie-hover');
+		$(this).children('a').removeClass('nav');
+		$(this).children('a').addClass('a-nav-ie-hover');
+	}, function () {
+		$(this).removeClass('td-nav-ie-hover');
+		$(this).children('a').addClass('nav');
+		$(this).children('a').removeClass('a-nav-ie-hover');
+	});
 
-    //load jquery hoverIntent plugin, used for navbar and gallery
-    loadScript('jQuery', 'js/jquery.hoverIntent.minified-1.8.0.js');
+	//ie hover fix for nav bar join button
+	$('td.navjoin').hover(function () {
+		$(this).addClass('td-navjoin-ie-hover');
+		$(this).children('a').removeClass('navjoin');
+		$(this).children('a').addClass('a-navjoin-ie-hover');
+	}, function () {
+		$(this).removeClass('td-navjoin-ie-hover');
+		$(this).children('a').addClass('navjoin');
+		$(this).children('a').removeClass('a-navjoin-ie-hover');
+	});
 
-    //load jquery slimbox plugin, used to show images in galleries
-    loadStyle('css/slimbox2.css');
-    loadScript('jQuery', 'js/slimbox-2.0.5.js');
 
-    //load jquery cookie plugin
-    loadScript('jQuery', 'js/jquery.cookie-1.4.1.js');
+	//gallery fade effect
+	$('p.gallery').children().hover(function () {
+		$(this).siblings().stop().fadeTo(500, 0.5);
+	}, function () {
+		$(this).siblings().stop().fadeTo(500, 1);
+	});
 
-    //load jquery konami plugin ;)
-    loadScript('jQuery', 'js/konami.js');
+	
+	//valid css and xhtml button effect
+	//Note: if a script changes the rel attr of the links, then functionality will break
+	$('p.validitybuttons').children('a').children('img').each(function (index, obj) {
+	
+		//save the original image url
+		$(obj).parent().attr('rel', $(obj).attr('src'));
+	
+		//make the hover element
+		$(obj).hover(function () {
+			var imgLink = $(this).attr('src').substring(0, $(this).attr('src').indexOf('-gray')) + '.gif';
+			$(this).attr('src', imgLink);
+		}, function () {
+			$(this).attr('src', $(this).parent().attr('rel'));
+		});
+	});
+	
 
-    //execute scripts for aiaa website
-    loadScript("(( (typeof jQuery !== 'undefined') &&\
-	               (typeof jQuery.fn.hoverIntent === 'function') &&\
-                   (typeof jQuery.fn.konami === 'function') &&\
-				   (typeof jQuery.cookie === 'function')) ? 'defined' : undefined )", 'js/aiaa.js');
-    
-    
-    //load google analytics
-    _gaq.push(['_setAccount', 'UA-24591701-1']);
-    _gaq.push(['_setDomainName', '.parmerlanepreschool.com']);
-    _gaq.push(['_trackPageview']);
-    loadScript('jQuery', 'http://www.google-analytics.com/ga.js', true);
-    
-    return {
-        loadScript: loadScript,
-        loadStyle: loadStyle
-    };
-}());
+	//secret konami code ;)
+	aiaa.konamiEnabled = $.cookie('konamiEnabled');
+	if (aiaa.konamiEnabled === 'true') {
+		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+        $('body').css('background-color', 'black');
+	}
+	$(window).konami({cheat: function () {
+		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+        $('body').css('background-color', 'black');
+		$.cookie('konamiEnabled', 'true');
+    }});
+	$(window).konami({cheat: function () {
+		aiaa.loadScript(null, 'js/asteroids.min.js');
+	}});
+	
+
+});
