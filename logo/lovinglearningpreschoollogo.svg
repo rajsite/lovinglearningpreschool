@@ -15,8 +15,11 @@
    height="744.09448"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.1 "
-   sodipodi:docname="parmerlanepreschoollogo.svg">
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="lovinglearningpreschoollogo.svg"
+   inkscape:export-filename="E:\Dropbox\Shares\lovinglearningpreschoolwebsite\lovinglearningpreschool\logo\logo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -43,10 +46,10 @@
        inkscape:collect="always"
        xlink:href="#linearGradient5211"
        id="linearGradient5223"
-       x1="163.00781"
-       y1="422.37831"
-       x2="400.89844"
-       y2="422.37831"
+       x1="195.1109"
+       y1="422.3783"
+       x2="493.8764"
+       y2="422.3783"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -57,16 +60,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.84098617"
-     inkscape:cx="178.1506"
-     inkscape:cy="260.46158"
+     inkscape:cx="237.79691"
+     inkscape:cy="251.0158"
      inkscape:document-units="px"
      inkscape:current-layer="g2996"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="721"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="667"
+     inkscape:window-height="700"
+     inkscape:window-x="683"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -89,7 +92,7 @@
        transform="translate(79.999996,482.85715)">
       <g
          id="g3780"
-         transform="matrix(0.51773825,0,0,0.47219227,80.008185,264.22147)"
+         transform="matrix(0.51773825,0,0,0.47219227,-69.404604,292.03785)"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90">
         <path
@@ -106,7 +109,7 @@
       </g>
       <g
          id="1"
-         transform="matrix(1.2410555,0,0,1.1937728,139.3798,393.6858)"
+         transform="matrix(1.2410555,0,0,1.1937728,-10.032989,421.50218)"
          inkscape:export-filename="D:\Development\website\parmerlanepreschool\logo\g3780.png"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90">
@@ -143,23 +146,41 @@
       </g>
       <flowRoot
          xml:space="preserve"
-         id="flowRoot2993"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:url(#linearGradient5223);fill-opacity:1;stroke:none;font-family:CreativeBlock BB;-inkscape-font-specification:CreativeBlock BB"
-         transform="translate(124.5218,-41.412468)"
-         inkscape:export-filename="D:\Development\website\parmerlanepreschool\logo\g3780.png"
-         inkscape:export-xdpi="90"
-         inkscape:export-ydpi="90"><flowRegion
-           id="flowRegion2995"
-           style="fill:url(#linearGradient5223);fill-opacity:1"><rect
-             id="rect2997"
-             width="260.40857"
-             height="90.370094"
-             x="139.12238"
-             y="371.91238"
-             style="text-align:end;text-anchor:end;fill:url(#linearGradient5223);fill-opacity:1" /></flowRegion><flowPara
-           id="flowPara2999"
-           style="fill:#000000;fill-opacity:1">Parmer Lane</flowPara><flowPara
-           id="flowPara3001"
-           style="fill:#000000;fill-opacity:1"> Preschool</flowPara></flowRoot>    </g>
+         id="flowRoot3012"
+         style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           id="flowRegion3014"><rect
+             id="rect3016"
+             width="211.65628"
+             height="116.52986"
+             x="336.5097"
+             y="532.43823" /></flowRegion><flowPara
+           id="flowPara3018" /></flowRoot>      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:McLaren;-inkscape-font-specification:McLaren"
+         x="329.74509"
+         y="345.95795"
+         id="text3020"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3022"
+           x="329.74509"
+           y="345.95795"
+           style="font-size:40px;font-weight:normal;text-align:end;text-anchor:end;-inkscape-font-specification:McLaren">Loving Learning</tspan><tspan
+           sodipodi:role="line"
+           x="329.74509"
+           y="395.95795"
+           id="tspan3024"
+           style="font-size:40px;font-weight:normal;text-align:end;text-anchor:end;-inkscape-font-specification:McLaren">Preschool</tspan></text>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3026"
+         style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           id="flowRegion3028"><rect
+             id="rect3030"
+             width="227.11432"
+             height="146.25687"
+             x="365.04761"
+             y="495.57672" /></flowRegion><flowPara
+           id="flowPara3032" /></flowRoot>    </g>
   </g>
 </svg>
