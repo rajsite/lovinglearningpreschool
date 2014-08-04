@@ -104,15 +104,14 @@ $(document).ready(function () {
 	
 	//valid css and xhtml button effect
 	//Note: if a script changes the rel attr of the links, then functionality will break
-	$('p.validitybuttons').children('a').children('img').each(function (index, obj) {
+	$('a.hover').children('img').each(function (index, obj) {
 	
 		//save the original image url
 		$(obj).parent().attr('rel', $(obj).attr('src'));
 	
 		//make the hover element
 		$(obj).hover(function () {
-			var imgLink = $(this).attr('src').substring(0, $(this).attr('src').indexOf('-gray')) + '.gif';
-			$(this).attr('src', imgLink);
+			$(this).attr('src', $(this).attr('src').replace('-hover', ''));
 		}, function () {
 			$(this).attr('src', $(this).parent().attr('rel'));
 		});
@@ -122,11 +121,11 @@ $(document).ready(function () {
 	//secret konami code ;)
 	aiaa.konamiEnabled = $.cookie('konamiEnabled');
 	if (aiaa.konamiEnabled === 'true') {
-		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+		$('body').css('background-image', $('body').css('background-image').replace('background', 'backgroundk'));
         $('body').css('background-color', 'black');
 	}
 	$(window).konami({cheat: function () {
-		$('body').css('background-image', $('body').css('background-image').replace('background.png', 'backgroundk.jpg'));
+		$('body').css('background-image', $('body').css('background-image').replace('background', 'backgroundk'));
         $('body').css('background-color', 'black');
 		$.cookie('konamiEnabled', 'true');
     }});
