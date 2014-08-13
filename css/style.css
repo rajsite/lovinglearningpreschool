@@ -18,7 +18,7 @@ table.supertable {
 	border-collapse: collapse;
 	width: 80%;
 	max-width: 1024px;
-	min-width: 700px;
+	min-width: 640px;
 }
 
 
@@ -208,30 +208,33 @@ td.content {
 /**********
 *  Content Border
 ***********/
+td.border{
+	min-width: 32px;
+	min-height: 32px;
+}
 
-
-td.bordertl {
+td.border.top.left {
 	background-image: url(../images/bordertopleft.png);
 }
-td.bordert {
+td.border.top.center {
 	background-image: url(../images/bordertop.png);
 }
-td.bordertr {
+td.border.top.right {
 	background-image: url(../images/bordertopright.png);
 }
-td.borderr {
-	background-image: url(../images/borderright.png);
-}
-td.borderl {
+td.border.middle.left {
 	background-image: url(../images/borderleft.png);
 }
-td.borderbl {
+td.border.middle.right {
+	background-image: url(../images/borderright.png);
+}
+td.border.bottom.left {
 	background-image: url(../images/borderbottomleft.png);
 }
-td.borderb {
+td.border.bottom.center {
 	background-image: url(../images/borderbottom.png);
 }
-td.borderbr {
+td.border.bottom.right {
 	background-image: url(../images/borderbottomright.png);
 }
 
