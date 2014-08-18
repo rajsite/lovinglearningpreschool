@@ -38,7 +38,7 @@
     //run when the document object mmodel has loaded
     $(document).ready(function () {
         //Activate the navbar scroller script
-        $("td.nav, td.navjoin").hoverIntent({
+        $("td.nav").hoverIntent({
             sensitivity: 7, // number = sensitivity threshold (must be 1 or higher)    
             interval: 45, // number = milliseconds for onMouseOver polling interval    
             over: function () {  // function = onMouseOver callback (REQUIRED)    
@@ -61,33 +61,17 @@
         });
 
         //make each navbar cell clickable instead of just the test link
-        $('td.nav, td.navjoin').click(function () {
+        $('td.nav').click(function () {
             document.location = $(this).children('a').attr('href');
         });
 
         //ie hover fix for nav bar
         $('td.nav').hover(function () {
-            $(this).addClass('td-nav-ie-hover');
-            $(this).children('a').removeClass('nav');
-            $(this).children('a').addClass('a-nav-ie-hover');
+            $(this).addClass('ie-hover');
         }, function () {
-            $(this).removeClass('td-nav-ie-hover');
-            $(this).children('a').addClass('nav');
-            $(this).children('a').removeClass('a-nav-ie-hover');
+            $(this).removeClass('ie-hover');
         });
-
-        //ie hover fix for nav bar join button
-        $('td.navjoin').hover(function () {
-            $(this).addClass('td-navjoin-ie-hover');
-            $(this).children('a').removeClass('navjoin');
-            $(this).children('a').addClass('a-navjoin-ie-hover');
-        }, function () {
-            $(this).removeClass('td-navjoin-ie-hover');
-            $(this).children('a').addClass('navjoin');
-            $(this).children('a').removeClass('a-navjoin-ie-hover');
-        });
-
-
+        
         //gallery fade effect
         $('p.gallery').children().hover(function () {
             $(this).siblings().stop().fadeTo(500, 0.5);

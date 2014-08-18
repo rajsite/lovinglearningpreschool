@@ -53,7 +53,7 @@ td.nav {
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 
 }
-td.nav:hover, td.td-nav-ie-hover {
+td.nav:hover, td.nav.ie-hover {
 	clear: none;
 	cursor: pointer;
 	background: #007ead;
@@ -90,67 +90,27 @@ a.nav:active {
 
 
 /******************
-*  Joinbutton Nav Elements
+*  Highlight Nav Elements
 ****************/
-td.navjoin {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: bold;
-	font-variant: normal;
-	margin: 0px;
-	text-align: center;
-	cursor: pointer;
-	text-decoration: none;
-	padding: .5em .1em .5em; /*top l&r bottom*/
-
+td.nav.highlight {
 	border: solid thin #da7c0c;
 	background: #f78d1d;
 	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
 	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
 	/*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');*/
-
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
-td.navjoin:hover, td.td-navjoin-ie-hover {
-	clear: none;
-	cursor: pointer;
+td.nav.highlight:hover, td.nav.highlight.ie-hover {
 	background: #f47c20;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
 	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
 	/*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');*/
 }
-td.navjoin:active {
-	cursor: pointer;
+td.nav.highlight:active {
 	background: #f47c20;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
 	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 	/*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');*/
 }
-
-a.navjoin:link {
-	font-style: normal;
-	margin: 0px;
-	width: 100%;
-	color:#FFFFFF;
-	text-decoration: none;
-}
-a.navjoin:visited {
-	color:#FFFFFF;
-	text-decoration: none;
-}
-a.navjoin:hover, a.a-navjoin-ie-hover{
-	color:#FFFFFF;
-	text-decoration: none;
-}
-a.navjoin:active {
-	color:#FFFFFF;
-	text-decoration: none;
-}
-
 
 /****
 * Scroller
